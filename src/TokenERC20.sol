@@ -7,11 +7,11 @@ string public name = "Coelho";
 
 string public symbol = "CLH";
 
-uint256 public decimals = 18;
+uint8 public decimals = 18;
 
 uint public totalSupply;
 
 constructor() {
-
+    totalSupply = 1000 *(10 ** decimals);
 }
 }
