@@ -7,6 +7,8 @@ string public name = "Coelho";
 
 string public symbol = "CLH";
 
+uint256 public decimals = 18;
+
 constructor() {
 
 }
