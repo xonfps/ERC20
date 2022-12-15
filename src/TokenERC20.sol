@@ -5,6 +5,8 @@ contract TokenERC20 {
 
 string public name = "Coelho";
 
+string public symbol = "CLH";
+
 constructor() {
 
 }
