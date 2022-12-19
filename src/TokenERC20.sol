@@ -23,5 +23,9 @@ function transfer(address _to, uint256 _value) public returns (bool success) {
     return true;
 }
 
+function _transfer(address _from, address _to, uint _value) private {
+    balanceOf[_from] = balanceOf[_from] - _value;
+    balanceOf[_to] = balanceOf[_to] + _value;
+}
 }
 }
