@@ -11,7 +11,10 @@ uint8 public decimals = 18;
 
 uint public totalSupply;
 
+mapping(address => uint) public balanceOf;
 constructor() {
     totalSupply = 1000 *(10 ** decimals);
+    balanceOf[msg.sender] = totalSupply;
+}
 }
 }
