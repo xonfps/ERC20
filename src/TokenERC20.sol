@@ -12,6 +12,9 @@ uint8 public decimals = 18;
 uint public totalSupply;
 
 mapping(address => uint) public balanceOf;
+
+mapping(address => mapping(address => uint)) public allowance;
+
 constructor() {
     totalSupply = 1000 *(10 ** decimals);
     balanceOf[msg.sender] = totalSupply;
@@ -27,5 +30,9 @@ function _transfer(address _from, address _to, uint _value) private {
     balanceOf[_from] = balanceOf[_from] - _value;
     balanceOf[_to] = balanceOf[_to] + _value;
 }
+
+function approve(address _spender, uint256 _value) public returns (bool success) {
+    allowance[msg.sender][_spender] = _value;
+    return true;
 }
 }
